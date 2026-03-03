@@ -1,15 +1,14 @@
 # 🚀 Avadh Kalathiya – Full Stack Developer Portfolio
 
-A modern, responsive developer portfolio built using **Next.js**, **TypeScript**, and **Tailwind CSS**.
+A modern, high-performance, and fully responsive developer portfolio built using **Next.js**, **TypeScript**, and **Tailwind CSS**.
 
-This project represents my work, skills, and passion as a Computer Engineering student focused on building scalable web applications and exploring AI-powered solutions.
+This project represents my technical expertise, problem-solving ability, and passion for building scalable web applications and AI-powered solutions.
 
 ---
 
 ## 🌐 Live Website
 
-🔗 https://avadhkalathiya.dev  
-*(Update if needed after deployment)*
+🔗 https://avadh-portfolio-pi.vercel.app/
 
 ---
 
@@ -20,53 +19,78 @@ This project represents my work, skills, and passion as a Computer Engineering s
 - 🎨 Tailwind CSS
 - 🌙 next-themes (Dark / Light Mode)
 - 📊 Vercel Analytics
+- 🚀 Vercel Deployment
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
 - 🔥 Clean & Modern UI
 - 📱 Fully Responsive Design
-- 🌙 Dark / Light Theme Support
+- 🌙 Dark / Light Theme Toggle
 - 📄 Resume Download Section
-- 📬 Contact Section
+- 📬 Functional Contact Section
 - ⚡ SEO Optimized Metadata
-- 📈 OpenGraph Integration for Social Sharing
+- 📈 OpenGraph Integration (Social Sharing)
+- 🚀 Production Deployment on Vercel
 
 ---
 
 ## 📂 Project Structure
+
+```
 FUTURE_FS_01
 │
-├── app/ # App Router pages & layout
-├── components/ # Reusable UI components
-├── public/ # Images & static assets
-├── styles/ # Global styles
+├── app/                # App Router pages & layouts
+├── components/         # Reusable UI components
+├── public/             # Static assets & images
+├── styles/             # Global styles
 ├── next.config.mjs
 ├── tsconfig.json
 └── package.json
-
+```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started (Local Setup)
 
 ### 1️⃣ Clone the Repository
-https://github.com/AvadhKalathiya
 
+```bash
+git clone https://github.com/AvadhKalathiya/your-repo-name.git
+```
 
 ### 2️⃣ Navigate to Project Folder
-cd your-repo-name
 
+```bash
+cd your-repo-name
+```
 
 ### 3️⃣ Install Dependencies
+
+```bash
 npm install
+```
 
 ### 4️⃣ Run Development Server
 
+```bash
 npm run dev
+```
+
 Now open:
+
+```
 http://localhost:3000
+```
+
+---
+
+## 📈 Deployment
+
+This project is deployed on **Vercel**.
+
+Every push to the `main` branch automatically triggers a new production deployment.
 
 ---
 
@@ -74,28 +98,37 @@ http://localhost:3000
 
 Hi, I'm **Avadh Kalathiya** — a passionate Full Stack Developer and Computer Engineering student.
 
-- 💻 React | Node.js | Java | Python | DSA
-- 🚀 Focused on scalable web applications
-- 🤖 Exploring AI & Machine Learning
-- 🎯 Preparing for top MNC placements
+### 💻 Technical Skills:
+- React / Next.js
+- Node.js / Express
+- MongoDB / MySQL
+- Java / Python
+- Data Structures & Algorithms
+
+### 🎯 Career Focus:
+- Scalable Web Applications
+- Backend System Design
+- AI & Machine Learning
+- Preparing for top MNC placements
 
 ---
 
 ## 📫 Connect With Me
 
 - 💼 LinkedIn: https://linkedin.com/in/your-link
-- 🧑‍💻 GitHub: https://github.com/your-username
-- 🌐 Portfolio: https://avadhkalathiya.dev
+- 🧑‍💻 GitHub: https://github.com/AvadhKalathiya
+- 🌐 Portfolio: https://avadh-portfolio-pi.vercel.app/
 
 ---
 
 ## ⭐ Support
 
-If you like this project, consider giving it a ⭐ on GitHub!
-🚀 Now Push to GitHub
+If you found this project helpful or inspiring, consider giving it a ⭐ on GitHub!
 
-Run:
+---
 
-git add .
-git commit -m "Added final README"
-git push
+## 🚀 Version
+
+Current Version: v1.0  
+Status: Production Live  
+Deployment: Vercel
