@@ -161,9 +161,11 @@ Through this internship, I have:
 
 # 📬 Contact
 
-Email: contact@futureinterns.com  
-Website: https://futureinterns.com  
-LinkedIn: https://linkedin.com/company/future-interns/
+Email: avadhkalathiya219@gmail.com  
+Git Hub :- https://github.com/AvadhKalathiya
+LinkedIn :- https://www.linkedin.com/in/avadh-kalathiya-506154276/
+X :- https://x.com/avadhk21
+Ig :- https://www.instagram.com/avadh_kalathiya21?igsh=OW1pZDFxazg1NWJt
 
 ---
 
