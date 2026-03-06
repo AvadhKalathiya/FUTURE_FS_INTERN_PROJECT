@@ -74,4 +74,6 @@ export async function dbConnect() {
   }
 
   return cached.mongoose.conn;
+}
+
 export { User, Lead };
