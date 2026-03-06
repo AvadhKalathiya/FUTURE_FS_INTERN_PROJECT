@@ -3,6 +3,10 @@ import mongoose from 'mongoose';
 // Database connection string
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/leadpro';
 
+if (!MONGODB_URI) {
+  throw new Error('Please define MONGODB_URI environment variable');
+}
+
 // User Schema
 const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
@@ -48,14 +52,26 @@ export async function dbConnect() {
     cached.mongoose.promise = mongoose
       .connect(MONGODB_URI, {
         bufferCommands: false,
+        maxPoolSize: 10,
+        serverSelectionTimeoutMS: 5000,
+        socketTimeoutMS: 45000,
       })
-      .then((mongoose) => {
-        return mongoose;
+      .then(mongoose => {
+        return mongoose.connection;
+      })
+      .catch(error => {
+        console.error('[DB Connect Error]:', error);
+        cached.mongoose.promise = null;
+        throw error;
       });
   }
 
-  cached.mongoose.conn = await cached.mongoose.promise;
-  return cached.mongoose.conn;
-}
+  try {
+    cached.mongoose.conn = await cached.mongoose.promise;
+  } catch (error) {
+    cached.mongoose.promise = null;
+    throw error;
+  }
 
+  return cached.mongoose.conn;
 export { User, Lead };
