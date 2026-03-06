@@ -1,27 +1,33 @@
 import { cookies } from 'next/headers';
+import jwt from 'jsonwebtoken';
 
 export interface AuthPayload {
   userId: string;
   email: string;
 }
 
-// Simple token generation using base64 encoding
+const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
+
+// JWT token generation
 export async function generateToken(payload: AuthPayload): Promise<string> {
-  const data = JSON.stringify({ ...payload, timestamp: Date.now() });
-  return Buffer.from(data).toString('base64');
+  return jwt.sign(payload, JWT_SECRET, {
+    expiresIn: '7d',
+    algorithm: 'HS256',
+  });
 }
 
-// Simple token verification
+// JWT token verification
 export async function verifyToken(token: string): Promise<AuthPayload | null> {
   try {
-    const data = Buffer.from(token, 'base64').toString('utf-8');
-    const payload = JSON.parse(data);
-    // Basic validation
-    if (payload.userId && payload.email) {
-      return { userId: payload.userId, email: payload.email };
+    const payload = jwt.verify(token, JWT_SECRET) as AuthPayload & { iat?: number; exp?: number };
+    // Exclude JWT metadata
+    const { iat, exp, ...authPayload } = payload;
+    if (authPayload.userId && authPayload.email) {
+      return authPayload as AuthPayload;
     }
     return null;
   } catch (error) {
+    console.error('[JWT Verification Error]:', error instanceof Error ? error.message : error);
     return null;
   }
 }
